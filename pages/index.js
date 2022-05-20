@@ -30,7 +30,7 @@ const Index = ({ trending }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   // API call naar api trending movies
   const url = `${process.env.API_BASE_PATH}/trending/movie/day?api_key=${process.env.API_KEY}`;
 
@@ -52,6 +52,7 @@ export const getServerSideProps = async () => {
     props: {
       trending,
     },
+    revalidate: 86400, // 1day
   };
 };
 

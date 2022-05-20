@@ -57,7 +57,22 @@ const MovieDetail = ({
   );
 };
 
-export const getServerSideProps = async (ctx) => {
+export const getStaticPaths = async () => {
+  const url = `${process.env.API_BASE_PATH}/trending/movie/day?api_key=${process.env.API_KEY}`;
+
+  const {
+    data: { results },
+  } = await axios(url);
+
+  return {
+    paths: results.map(({ id: movieId }) => ({
+      params: { movieId: movieId.toString() },
+    })),
+    fallback: "blocking",
+  };
+};
+
+export const getStaticProps = async (ctx) => {
   const {
     params: { movieId },
   } = ctx;
