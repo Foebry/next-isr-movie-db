@@ -20,7 +20,7 @@ const MovieDetail = ({
       <div className="details">
         <aside className="movies">
           <div className="imgholder">
-            <img src={img} />
+            <img src={img} alt="" />
           </div>
         </aside>
         <section className="detail">

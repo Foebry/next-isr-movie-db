@@ -8,7 +8,7 @@ const Index = ({ trending }) => {
         <h1>Trending movies</h1>
         <section className="movies">
           {trending.map(({ id, title, year, score, img }) => (
-            <article className="" key={id}>
+            <article className="" key={id} alt="">
               <h2>
                 {title} <span>{year}</span>
                 <span>
