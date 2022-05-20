@@ -1,0 +1,334 @@
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  font-size: 21.5px;
+  color: #fefefe;
+}
+
+body {
+  background-color: #000;
+}
+
+main {
+  max-width: 1200px;
+  width: 90%;
+  margin: 50px auto 0;
+}
+main > h2 {
+  font-size: 24px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 24px;
+}
+
+section.movies {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 0 10px 20px;
+  gap: 10px;
+}
+section.movies article {
+  padding: 5px;
+  flex: 1 1 225px;
+  background-color: #0a0a0a;
+  max-width: 337.5px;
+  position: relative;
+}
+section.movies article:hover {
+  cursor: pointer;
+}
+section.movies article:hover .imgholder:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0a0aaa;
+}
+section.movies article:hover .imgholder .summary {
+  display: block;
+}
+section.movies article h2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 18px;
+  align-items: center;
+  margin-bottom: 5px;
+}
+section.movies article h2 span {
+  font-size: 12px;
+}
+section.movies article h2 span span.score-10,
+section.movies article h2 span span.score-9 {
+  color: #12ff00;
+}
+section.movies article h2 span span.score-7,
+section.movies article h2 span span.score-8 {
+  color: #4f9012;
+}
+section.movies article h2 span span.score-6 {
+  color: #b1b90e;
+}
+section.movies article h2 span span.score-5 {
+  color: #e3a20d;
+}
+section.movies article h2 span span.score-4 {
+  color: #e3630d;
+}
+section.movies article h2 span span.score-2,
+section.movies article h2 span span.score-3 {
+  color: #e3440d;
+}
+section.movies article h2 span span.score-1 {
+  color: #ea190f;
+}
+section.movies article .imgholder {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5px;
+}
+section.movies article .imgholder img {
+  aspect-ratio: 9/16;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+section.movies article .imgholder p {
+  position: absolute;
+  width: 100%;
+}
+section.movies article .imgholder p.summary {
+  width: calc(100% - 20px);
+  top: 100px;
+  left: 0;
+  padding: 0 10px;
+  font-size: 16px;
+  display: none;
+  z-index: 2;
+  line-height: 18px;
+}
+section.movies article .genres {
+  bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.details {
+  display: flex;
+  gap: 50px;
+  position: relative;
+}
+.details .budget {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  text-align: right;
+}
+.details .budget p {
+  position: relative;
+}
+.details .budget p:after {
+  margin-left: 5px;
+  content: "€";
+}
+.details .budget p span.positive {
+  color: green;
+}
+.details .budget p span.negative {
+  color: red;
+}
+.details .overview {
+  margin-top: 70px;
+}
+.details .overview p {
+  width: 70%;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.details .links {
+  margin-bottom: 50px;
+}
+.details .links p {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1165px) {
+  main {
+    width: 98%;
+  }
+}
+@media screen and (max-width: 760px) {
+  section.movies article {
+    max-width: 555px;
+  }
+}
+@media screen and (max-width: 555px) {
+  section.movies article {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  section.movies article img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  section.movies article .imgholder {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  section.movies article .imgholder:before {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
