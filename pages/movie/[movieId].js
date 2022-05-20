@@ -38,14 +38,14 @@ const MovieDetail = ({
           <div className="links">
             <p>
               Visit{" "}
-              <a href={imdbLink} target="_blank">
+              <a href={imdbLink} target="_blank" rel="noreferrer">
                 imdb
               </a>{" "}
               page
             </p>
             <p>
               Visit movie{" "}
-              <a href={homepage} target="_blank">
+              <a href={homepage} target="_blank" rel="noreferrer">
                 homepage
               </a>{" "}
             </p>
